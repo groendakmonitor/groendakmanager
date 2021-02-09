@@ -2,6 +2,7 @@ import { API_URL } from "api";
 import { setAuthToken } from "authentication";
 import { useState } from "react";
 import useLocation from "wouter/use-location";
+import img from './styles/groendak.jpg';
 
 const Login = () => {
 
@@ -30,25 +31,26 @@ const Login = () => {
 
   return (
     <div className="container d-flex justify-content-center align-items-center vh-100">
-      <div className="col col-md-6 user-form bg-white py-4 d-flex flex-column">
+      <div className="col col-md-4 user-form py-4 d-flex flex-column">
         <div className="card">
-          <div className="card-header pt-3 bg-success text-white">
-            <h3>Log in to groendakmonitor</h3>
-          </div>
+          <img src={img} className="card-img-top" />
           <div className="card-body">
+            <h3 className="text-center">Log in to groendakmonitor</h3>
             <form>
-              <div className="mt-3">
-                <label className="form-label text-start w-100">
-                  Password
-                  <input type="password" className="form-control mt-2" onChange={(e) => {setPassword(e.currentTarget.value)}} value={password} />              
-                </label>
+              <div className="mt-5">
+                <div className="form-group">
+                  <label className="form-label text-start w-100">
+                    Password
+                    <input type="password" className="form-control mt-2" onChange={(e) => {setPassword(e.currentTarget.value)}} value={password} />              
+                  </label>
+                </div>
               </div>
             </form>
-          </div>
-          <div className="pt-0 card-body">
-            <button className="ml-auto btn btn-primary float-end" onClick={handleLogin} >
-              Login
-            </button>
+            <div className="form-group">
+              <button className="w-100 btn btn-success" onClick={handleLogin} >
+                Login
+              </button>
+            </div>
           </div>
         </div>
       </div>  

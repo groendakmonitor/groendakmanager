@@ -2,12 +2,13 @@ import { Customer } from "models/customer";
 
 interface Props {
   data: Customer
+  onClick: (customer: Customer) => void
 }
 
 const CustomerRow = (props: Props) => {
-  const { data } = props;
+  const { data, onClick } = props;
   return (
-    <tr>
+    <tr onClick={() => onClick(data) }>
       <td>{data.id}</td>
       <td>{data.name}</td>
     </tr>

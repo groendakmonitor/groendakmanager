@@ -4,10 +4,11 @@ import CustomerRow from "./CustomerRow";
 
 interface Props {
   data: Customer[]
+  onCustomerSelect: (customer: Customer) => void
 }
 
 const CustomerList = (props: Props) => {
-  const { data } = props;
+  const { data, onCustomerSelect } = props;
   return (
     <table className="table table-striped table-hover">
       <thead>
@@ -18,7 +19,7 @@ const CustomerList = (props: Props) => {
       </thead>
       <tbody>
         {data.map((c) => 
-          <CustomerRow key={c.id} data={c} />
+          <CustomerRow key={c.id} data={c} onClick={onCustomerSelect} />
         )}
       </tbody>  
     </table>
