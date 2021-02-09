@@ -1,0 +1,43 @@
+// Import template config
+@import "config";
+@import "shared/utils/ll-functions";
+@import "shared/utils/ll-mixins";
+@import "theme/colors/palette";
+
+// Core variables and mixins
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Import template's variables
+@import "variables/variables-core";
+@import "variables/variables-custom";
+@import "theme/bootstrap_limitless/mixins";
+
+// Import default files
+@import "theme/bootstrap_limitless/reboot";
+@import "theme/bootstrap_limitless/type";
+@import "theme/bootstrap_limitless/code";
+@import "theme/bootstrap_limitless/tables";
+@import "theme/bootstrap_limitless/forms";
+@import "theme/bootstrap_limitless/buttons";
+@import "theme/bootstrap_limitless/dropdown";
+@import "theme/bootstrap_limitless/button-group";
+@import "theme/bootstrap_limitless/input-group";
+@import "theme/bootstrap_limitless/custom-forms";
+@import "theme/bootstrap_limitless/nav";
+@import "theme/bootstrap_limitless/navbar";
+@import "theme/bootstrap_limitless/card";
+@import "theme/bootstrap_limitless/breadcrumb";
+@import "theme/bootstrap_limitless/pagination";
+@import "theme/bootstrap_limitless/badge";
+@import "theme/bootstrap_limitless/alert";
+@import "theme/bootstrap_limitless/progress";
+@import "theme/bootstrap_limitless/media";
+@import "theme/bootstrap_limitless/list-group";
+@import "theme/bootstrap_limitless/close";
+@import "theme/bootstrap_limitless/toasts";
+@import "theme/bootstrap_limitless/modal";
+@import "theme/bootstrap_limitless/tooltip";
+@import "theme/bootstrap_limitless/popover";
+@import "theme/bootstrap_limitless/utilities";

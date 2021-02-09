@@ -1,0 +1,52 @@
+.Toastify__toast {
+  margin: $noty-spacer-y 0;
+  position: relative;
+  border: $alert-border-width solid transparent;
+  @include border-radius($alert-border-radius);
+
+  .Toastify__progress-bar {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: .1875rem;
+    width: 100%;
+    background-color: rgba(0,0,0,.25);
+  }
+}
+
+// Alert type
+.Toastify__toast--alert {
+  background-color: $notification-alert-bg;
+  color: $notification-alert-color;
+  border-color: $notification-alert-border-color;
+}
+
+// Warning type
+.Toastify__toast--warning {
+  background-color: $notification-warning-bg;
+  color: $notification-warning-color;
+  border-color: $notification-warning-border-color;
+}
+
+// Error type
+.Toastify__toast--error {
+  background-color: $notification-error-bg;
+  color: $notification-error-color;
+  border-color: $notification-error-border-color;
+}
+
+// Info type
+.Toastify__toast--info {
+  background-color: $notification-info-bg;
+  color: $notification-info-color;
+  border-color: $notification-info-border-color;
+}
+
+// Success type
+.Toastify__toast--success {
+  background-color: $notification-success-bg;
+  color: $notification-success-color;
+  border-color: $notification-success-border-color;
+}
+

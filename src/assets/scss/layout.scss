@@ -1,0 +1,30 @@
+// Import template config
+@import "config";
+@import "shared/utils/ll-functions";
+@import "shared/utils/ll-mixins";
+@import "theme/colors/palette";
+
+// Core variables and mixins
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Import template's variables
+@import "variables/variables-core";
+@import "variables/variables-custom";
+@import "theme/bootstrap_limitless/mixins";
+
+// Content
+@import "layout/content";
+
+// Header
+@import "layout/header";
+
+// Sidebar
+@import "layout/sidebar";
+
+// Boxed layout
+@import "layout/boxed";
+
+// Other
+@import "template_contracts";

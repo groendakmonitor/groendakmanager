@@ -1,0 +1,325 @@
+// Import template config
+@import "config";
+@import "shared/utils/ll-functions";
+@import "shared/utils/ll-mixins";
+@import "theme/colors/palette";
+
+// Core variables and mixins
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Import template's variables
+@import "variables/variables-core";
+@import "variables/variables-custom";
+@import "theme/bootstrap_limitless/mixins";
+
+// FOUC helpers
+@import "shared/utils/fouc";
+
+// Page loader
+// ------------------------------
+
+// Pace page loader
+@import "shared/pace/theme-default";
+
+
+
+// Forms
+// ------------------------------
+
+// Uniform
+@import "theme/components/forms/uniform";
+
+// Switchery
+@import "theme/components/forms/switchery";
+
+// BS switch
+@import "theme/components/forms/bootstrap-switch";
+
+
+// Select2
+@import "theme/components/forms/select2";
+
+// Multiselect
+@import "theme/components/forms/multiselect";
+
+
+// Passy
+@import "theme/components/forms/passy";
+
+// Typeahead
+@import "theme/components/forms/typeahead";
+
+// Validation
+@import "theme/components/forms/validation";
+
+// Floating labels
+@import "theme/components/forms/floating-labels";
+
+// Alpaca
+@import "theme/components/forms/alpaca";
+
+
+// Tokenfield
+@import "theme/components/forms/tokenfield";
+
+// Tags input
+@import "theme/components/forms/tags-input";
+
+
+// Touchspin spinners
+@import "theme/components/forms/touchspin";
+
+// Dual listboxes
+@import "theme/components/forms/dual-listbox";
+
+
+// Wizard
+@import "theme/components/forms/wizard";
+
+
+// Text editors
+// ------------------------------
+
+// Trumbowyg
+@import "theme/components/forms/editors/trumbowyg";
+
+// Ace
+@import "theme/components/forms/editors/ace";
+
+
+// Pickers
+// ------------------------------
+
+// Daterange picker
+@import "theme/components/pickers/daterange";
+
+// Pickadate base
+@import "theme/components/pickers/pickadate/base";
+
+// Pickadate date picker
+@import "theme/components/pickers/pickadate/date";
+
+// Pickadate time picker
+@import "theme/components/pickers/pickadate/time";
+
+// Anytime picker
+@import "theme/components/pickers/anytime";
+
+// Color picker
+@import "theme/components/pickers/spectrum";
+
+
+// File uploaders
+// ------------------------------
+
+// Plupload
+@import "theme/components/forms/uploaders/plupload";
+
+// File input
+@import "theme/components/forms/uploaders/file-input";
+
+// Dropzone
+@import "theme/components/forms/uploaders/dropzone";
+
+
+// Notifications
+// ------------------------------
+
+// Noty notifications
+@import "theme/components/notifications/noty";
+
+// Toastify notifications
+@import "theme/components/notifications/toast";
+
+// PNotify notifications
+@import "theme/components/notifications/pnotify";
+
+// jGrowl notifications
+@import "theme/components/notifications/jgrowl";
+
+// Sweet Alerts
+@import "theme/components/notifications/sweet-alerts";
+
+
+// Sliders
+// ------------------------------
+
+// Slider pips
+@import "theme/components/sliders/slider-pips";
+
+// NoUI slider
+@import "theme/components/sliders/noui-slider";
+
+// Ion range slider
+@import "theme/components/sliders/ion-range-slider";
+
+
+// jQuery UI components
+// ------------------------------
+
+// Interactions
+@import "theme/components/jquery_ui/interactions";
+
+// Widgets
+@import "theme/components/jquery_ui/widgets";
+
+
+// UI components
+// ------------------------------
+
+// Prism - syntax highlighter
+@import "theme/components/ui/prism";
+
+// Slinky - multi level drilldown menu
+@import "theme/components/ui/slinky";
+
+// Sticky kit
+@import "theme/components/ui/sticky";
+
+// Headroom - hhide navbar on scroll
+@import "theme/components/ui/headroom";
+
+// Dragula
+@import "theme/components/ui/dragula";
+
+// Perfect scrollbar
+@import "theme/components/ui/perfect-scrollbar";
+
+
+// Misc components
+// ------------------------------
+
+// [Material] Floating action buttons
+@import "theme/components/misc/fab";
+
+// Fancytree
+@import "theme/components/misc/fancytree";
+
+// Progress buttons
+@import "theme/components/misc/progress-buttons";
+
+// Full calendar
+@import "theme/components/misc/fullcalendar";
+
+// Image cropper
+@import "theme/components/misc/image-cropper";
+
+// Lightbox plugin
+@import "theme/components/misc/fancybox";
+
+
+// Tables
+// ------------------------------
+
+// Footable - responsive table tools
+@import "theme/components/tables/footable";
+
+
+// Handsontable
+// ------------------------------
+
+// Handsontable - excel-like spreadsheet for apps
+@import "theme/components/tables/handsontable";
+
+
+// Datatables
+// ------------------------------
+
+// Core
+@import "theme/components/tables/datatables/datatables";
+
+// Datatables - columns reorder
+@import "theme/components/tables/datatables/datatable-columns-reorder";
+
+// Datatables - rows reorder
+@import "theme/components/tables/datatables/datatable-rows-reorder";
+
+// Datatables - fixed columns
+@import "theme/components/tables/datatables/datatable-fixed-columns";
+
+// Datatables - fixed header
+@import "theme/components/tables/datatables/datatable-fixed-header";
+
+// Datatables - autofill
+@import "theme/components/tables/datatables/datatable-autofill";
+
+// Datatables - select
+@import "theme/components/tables/datatables/datatable-select";
+
+// Datatables - buttons
+@import "theme/components/tables/datatables/datatable-buttons";
+
+// Datatables - key table
+@import "theme/components/tables/datatables/datatable-keytable";
+
+// Datatables - scroller
+@import "theme/components/tables/datatables/datatable-scroller";
+
+// Datatables - responsive
+@import "theme/components/tables/datatables/datatable-responsive";
+
+
+// Maps
+// ------------------------------
+
+// Google Maps
+@import "shared/maps/google-maps";
+
+// jVectorMap
+@import "shared/maps/jvectormap";
+
+
+// Charts
+// ------------------------------
+
+// Charts base
+@import "shared/charts/charts";
+
+// C3 chart library
+@import "shared/charts/c3";
+
+// D3 chart library
+@import "shared/charts/d3";
+
+
+// Page kits
+// ------------------------------
+
+// ECommerce
+@import "shared/pages/ecommerce";
+
+// Blog
+@import "shared/pages/blog";
+
+// Task manager
+@import "shared/pages/task-manager";
+
+// Inbox
+@import "shared/pages/inbox";
+
+// Profile
+@import "shared/pages/profile";
+
+// Login
+@import "shared/pages/login";
+
+// Timelines
+@import "shared/pages/timelines";
+
+// Chats
+@import "shared/pages/chats";
+
+// Error page
+@import "shared/pages/error";
+
+
+// Other components
+// ------------------------------
+
+// Heading elements
+@import "theme/components/ui/header-elements";
+
+// Helpers
+@import "shared/utils/helpers";
