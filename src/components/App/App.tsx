@@ -2,11 +2,11 @@ import Login from 'components/pages/Login/Login';
 import Overview from 'components/pages/Overview';
 import React from 'react';
 import { Route, Switch } from 'wouter';
-import './App.css';
+import './app.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Switch>
         <Route path="/login">
           <Login />
