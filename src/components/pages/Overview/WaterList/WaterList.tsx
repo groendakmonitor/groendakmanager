@@ -1,6 +1,8 @@
 import { Water } from "models/water";
 import React, { useState } from "react";
 import WaterRow from "./WaterRow";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRandom } from '@fortawesome/free-solid-svg-icons'
 
 interface Props {
   data: Water[];
@@ -22,13 +24,28 @@ const CustomerList = (props: Props) => {
   const handleAddClick = () => {
     onAddWater(addingWater.incoming, addingWater.outgoing);
   }
+
+  const handleRandomIncoming = () => {
+    setAddingWater(aW => ({
+      ...aW,
+      incoming: (Math.random() * 5)
+    }))
+  }
+
+  const handleRandomOutgoing = () => {
+    setAddingWater(aW => ({
+      ...aW,
+      outgoing: (Math.random() * 4) + aW.incoming
+    }))
+
+  }
   return (
     <div className="card">
       <div className="card-body">
         <table className="table table-striped table-hover">
           <thead>
             <tr>
-              <th scope="col" style={{width: 46}}>Datum</th>
+              <th scope="col" style={{width: 46}}>Date</th>
               <th scope="col">Incoming</th>
               <th scope="col">Outgoing</th>
             </tr>
@@ -44,17 +61,23 @@ const CustomerList = (props: Props) => {
         <div className="d-flex">
           <div className="col-6">
             <label className="form-label">Incoming</label>
-            <input type="number" className="form-control" name="incoming" value={addingWater.incoming} onChange={handleChange} placeholder="Incoming"/>
+            <div className="input-group">
+              <input type="number" className="form-control" name="incoming" value={addingWater.incoming} onChange={handleChange} placeholder="Incoming"/>
+              <span className="input-group-append">
+                <button className="btn btn-primary" onClick={handleRandomIncoming}>
+                  <FontAwesomeIcon icon={faRandom} />
+                </button>
+              </span>
+            </div>
           </div>
           <div className="col-6">
             <label className="form-label">Outgoing</label>
             <div className="input-group">
               <input type="number" className="form-control" name="outgoing" value={addingWater.outgoing} onChange={handleChange} placeholder="Outgoing"/>
               <span className="input-group-append">
-                <button className="btn btn-light">
-                  <i className="fas fa-random"></i>
+                <button className="btn btn-primary" onClick={handleRandomOutgoing}>
+                  <FontAwesomeIcon icon={faRandom} />
                 </button>
-                {/* <span className="input-group-button">cm</span> */}
               </span>
             </div>
           </div>
