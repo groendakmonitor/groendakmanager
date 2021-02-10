@@ -6,9 +6,11 @@ interface Props {
 
 const WaterRow = (props: Props) => {
   const { data } = props;
+  const date = new Date(data.date).toLocaleString();
+
   return (
     <tr>
-      <td>{data.date}</td>
+      <td>{date}</td>
       <td>{data.incoming}</td>
       <td>{data.outgoing}</td>
     </tr>

@@ -1,4 +1,4 @@
-export interface Customer {
+export interface CustomerData {
   id: string;
   name: string;
   roof_size: number;
@@ -7,3 +7,6 @@ export interface Customer {
   start_date: string;
 }
 
+export type CustomerListData = CustomerData & {
+  last_water: string
+}

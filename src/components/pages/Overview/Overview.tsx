@@ -4,7 +4,7 @@ import Page from "components/misc/Page";
 import { Water } from "models/water";
 import React, { useEffect, useState } from "react";
 import useLocation from "wouter/use-location";
-import { Customer } from "../../../models/customer";
+import { CustomerData, CustomerListData } from "../../../models/customer";
 import Loading from "../../misc/Loading";
 import CustomerDetails from "./CustomerDetails";
 import CustomerList from "./CustomerList";
@@ -12,8 +12,8 @@ import WaterList from "./WaterList";
 
 const Overview = () => {
   const [_location, setLocation] = useLocation();
-  const [data, setData] = useState<Customer[]>()
-  const [selectedCustomer, setSelectedCustomer] = useState<Customer>()
+  const [data, setData] = useState<CustomerListData[]>()
+  const [selectedCustomer, setSelectedCustomer] = useState<CustomerData>()
   const [loading, setLoading] = useState(false);
   const [selectedCustomerWater, setSelectedCustomerWater] = useState<Water[]>()
   
@@ -28,7 +28,7 @@ const Overview = () => {
       method: 'get',
       headers: [['Content-Type', 'application/json'], getAuthHeader()],
     })
-    .then<Customer[]>((response) => response.json())
+    .then<CustomerListData[]>((response) => response.json())
     .then((response) => {
       setData(response);
       setLoading(false)
@@ -45,7 +45,7 @@ const Overview = () => {
         body: JSON.stringify({
           name
         })
-      }).then<Customer[]>((response) => response.json())
+      }).then<CustomerListData[]>((response) => response.json())
       .then((response) => {
         setData(response);
         setLoading(false);
@@ -53,18 +53,27 @@ const Overview = () => {
     }
   }
 
-  const handleUpdateCustomer = (customerData: Customer) => {
+  const handleUpdateCustomer = (customerData: CustomerData) => {
     setLoading(true);
     // Update customer on backend
     fetch(`${process.env.REACT_APP_API_URL}/customer`, {
       method: 'put',
       headers: [['Content-Type', 'application/json'], getAuthHeader()],
       body: JSON.stringify(customerData)
-    }).then<Customer[]>((response) => response.json())
+    }).then<CustomerListData[]>((response) => response.json())
     .then((response) => {
       setData(response);
       setLoading(false);
     })
+  }
+
+  const handleDeleteCustomer = () => {
+    if (selectedCustomer){
+      // eslint-disable-next-line no-restricted-globals
+      if (confirm(`Are you sure you want to delete customer "${selectedCustomer.name}" (id: ${selectedCustomer.id}) with ${selectedCustomerWater?.length} water data points` )){
+        console.log('go!')
+      }
+    }
   }
 
   useEffect(() => {
@@ -126,7 +135,7 @@ const Overview = () => {
             </div>
           </div>
           <div className="col">
-            { selectedCustomer && <CustomerDetails data={selectedCustomer} onUpdateCustomer={handleUpdateCustomer} /> }
+            { selectedCustomer && <CustomerDetails data={selectedCustomer} onUpdateCustomer={handleUpdateCustomer} onDeleteCustomer={handleDeleteCustomer}/> }
             { selectedCustomerWater && <WaterList data={selectedCustomerWater} onAddWater={handleAddingWater} />}
           </div>
         </div>

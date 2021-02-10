@@ -1,13 +1,13 @@
-import { Customer } from "models/customer";
+import { CustomerData, CustomerListData } from "models/customer";
 import React from "react";
 import CustomerRow from "./CustomerRow";
 import './styles/customerList.scss';
 
 interface Props {
-  data: Customer[];
-  selectedCustomer?: Customer;
+  data: CustomerListData[];
+  selectedCustomer?: CustomerData;
 
-  onCustomerSelect: (customer: Customer) => void
+  onCustomerSelect: (customer: CustomerData) => void
 }
 
 const CustomerList = (props: Props) => {
@@ -18,6 +18,7 @@ const CustomerList = (props: Props) => {
         <tr>
           <th scope="col" style={{width: 32}}>#</th>
           <th scope="col">Name</th>
+          <th scope="col">Last data</th>
         </tr>
       </thead>
       <tbody>

@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Customer } from "models/customer";
+import { CustomerData } from "models/customer";
 
 interface Props {
-  data: Customer;
+  data: CustomerData;
 
-  onUpdateCustomer: (data: Customer) => void;
+  onUpdateCustomer: (data: CustomerData) => void;
+  onDeleteCustomer: () => void;
 }
 
 const CustomerDetails = (props: Props) => {
-  const { data, onUpdateCustomer } = props;
+  const { data, onUpdateCustomer, onDeleteCustomer } = props;
   const [current, setCurrent] = useState(data);
 
   useEffect(() => {
@@ -24,6 +25,9 @@ const CustomerDetails = (props: Props) => {
 
   const handleSaveClick = () => {
     onUpdateCustomer(current);
+  }
+  const handleDeleteClick = () => {
+    onDeleteCustomer();
   }
 
   const ref = useRef<HTMLDivElement>(null)
@@ -151,7 +155,7 @@ const CustomerDetails = (props: Props) => {
         </fieldset> 
       </div>
       <div className="card-footer d-flex justify-content-between">
-        <button type="submit" className="btn btn-light">Delete</button>
+        <button type="submit" className="btn btn-light" onClick={handleDeleteClick}>Delete</button>
         <div>
           <button type="button" className="ml-2 btn btn-primary" onClick={handleSaveClick}>
             Save
