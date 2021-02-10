@@ -1,4 +1,4 @@
-import { API_URL } from "api";
+// import { API_URL } from "api";
 import { setAuthToken } from "authentication";
 import { useState } from "react";
 import useLocation from "wouter/use-location";
@@ -10,7 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState<string>("safehouse ominous overdrive")
 
   const handleLogin = () => {
-    fetch(`${API_URL}/login`, {
+    fetch(`${process.env.REACT_APP_API_URL}/login`, {
       method: 'post',
       headers: [['Content-Type', 'application/json']],
       body: JSON.stringify({

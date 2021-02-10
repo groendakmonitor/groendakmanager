@@ -1,4 +1,3 @@
-import { API_URL } from "api";
 import { getAuthHeader, getAuthToken } from "authentication";
 import Header from "components/misc/Header";
 import Page from "components/misc/Page";
@@ -7,7 +6,7 @@ import useLocation from "wouter/use-location";
 import { Customer } from "../../../models/customer";
 import Loading from "../../misc/Loading";
 import CustomerDetails from "./CustomerDetails";
-import CustomerList from "./CustomerList/CustomerList";
+import CustomerList from "./CustomerList";
 
 const Overview = () => {
   const [_location, setLocation] = useLocation();
@@ -22,7 +21,7 @@ const Overview = () => {
       return;
     }
     setLoading(true)
-    fetch(`${API_URL}/customers`, {
+    fetch(`${process.env.REACT_APP_API_URL}/customers`, {
       method: 'get',
       headers: [['Content-Type', 'application/json'], getAuthHeader()],
     })
@@ -37,7 +36,7 @@ const Overview = () => {
     const name = prompt("Enter customer name");
     if (name) {
       setLoading(true)
-      fetch(`${API_URL}/customer`, {
+      fetch(`${process.env.REACT_APP_API_URL}/customer`, {
         method: 'post',
         headers: [['Content-Type', 'application/json'], getAuthHeader()],
         body: JSON.stringify({
