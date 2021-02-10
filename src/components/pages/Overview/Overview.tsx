@@ -97,8 +97,8 @@ const Overview = () => {
         headers: [['Content-Type', 'application/json'], getAuthHeader()],
         body: JSON.stringify({
           id: selectedCustomer.id,
-          incoming,
-          outgoing
+          in: incoming,
+          out: outgoing
         })
       }).then(() => {
         // fetch water
