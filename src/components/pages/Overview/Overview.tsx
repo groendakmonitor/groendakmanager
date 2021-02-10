@@ -80,7 +80,7 @@ const Overview = () => {
               </div>
               <div className="card-body p-0">
               { loading && <Loading />}
-              { data && <CustomerList data={data} onCustomerSelect={setSelectedCustomer} /> }
+              { data && <CustomerList data={data} onCustomerSelect={setSelectedCustomer} selectedCustomer={selectedCustomer} /> }
               </div>
             </div>
           </div>
