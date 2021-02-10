@@ -50,6 +50,22 @@ const Overview = () => {
     }
   }
 
+  const handleUpdateCustomer = (customerData: Customer) => {
+    console.log(customerData)
+    setLoading(true);
+    // Update customer on backend
+    fetch(`${process.env.REACT_APP_API_URL}/customer`, {
+      method: 'put',
+      headers: [['Content-Type', 'application/json'], getAuthHeader()],
+      body: JSON.stringify(customerData)
+    }).then<Customer[]>((response) => response.json())
+    .then((response) => {
+      console.log('done', response)
+      setData(response);
+      setLoading(false);
+    })
+  }
+
   return (
     <Page>
       <Header title="Customers">
@@ -69,7 +85,7 @@ const Overview = () => {
             </div>
           </div>
           <div className="col">
-            { selectedCustomer && <CustomerDetails data={selectedCustomer} /> }
+            { selectedCustomer && <CustomerDetails data={selectedCustomer} onUpdateCustomer={handleUpdateCustomer} /> }
           </div>
         </div>
       </div>
