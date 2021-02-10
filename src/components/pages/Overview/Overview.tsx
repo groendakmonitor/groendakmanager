@@ -1,18 +1,21 @@
 import { getAuthHeader, getAuthToken } from "authentication";
 import Header from "components/misc/Header";
 import Page from "components/misc/Page";
+import { Water } from "models/water";
 import React, { useEffect, useState } from "react";
 import useLocation from "wouter/use-location";
 import { Customer } from "../../../models/customer";
 import Loading from "../../misc/Loading";
 import CustomerDetails from "./CustomerDetails";
 import CustomerList from "./CustomerList";
+import WaterList from "./WaterList";
 
 const Overview = () => {
   const [_location, setLocation] = useLocation();
   const [data, setData] = useState<Customer[]>()
   const [selectedCustomer, setSelectedCustomer] = useState<Customer>()
   const [loading, setLoading] = useState(false);
+  const [selectedCustomerWater, setSelectedCustomerWater] = useState<Water[]>()
   
   useEffect(() => {
     const token = getAuthToken();
@@ -51,7 +54,6 @@ const Overview = () => {
   }
 
   const handleUpdateCustomer = (customerData: Customer) => {
-    console.log(customerData)
     setLoading(true);
     // Update customer on backend
     fetch(`${process.env.REACT_APP_API_URL}/customer`, {
@@ -60,10 +62,49 @@ const Overview = () => {
       body: JSON.stringify(customerData)
     }).then<Customer[]>((response) => response.json())
     .then((response) => {
-      console.log('done', response)
       setData(response);
       setLoading(false);
     })
+  }
+
+  useEffect(() => {
+    // Fetch water for selected customer
+    if (selectedCustomer) {
+      fetch(`${process.env.REACT_APP_API_URL}/water/${selectedCustomer.id}`, {
+        method: 'get',
+        headers: [['Content-Type', 'application/json'], getAuthHeader()],
+      })
+      .then<Water[]>((response) => response.json())
+      .then((response) => {
+        setSelectedCustomerWater(response);
+      })
+    }
+  },[selectedCustomer]);
+
+  const handleAddingWater = (incoming: number, outgoing: number) => {
+    if (selectedCustomer) {
+      fetch(`${process.env.REACT_APP_API_URL}/water`, {
+        method: 'post',
+        headers: [['Content-Type', 'application/json'], getAuthHeader()],
+        body: JSON.stringify({
+          id: selectedCustomer.id,
+          incoming,
+          outgoing
+        })
+      }).then(() => {
+        // fetch water
+        if (selectedCustomer) {
+          fetch(`${process.env.REACT_APP_API_URL}/water/${selectedCustomer.id}`, {
+            method: 'get',
+            headers: [['Content-Type', 'application/json'], getAuthHeader()],
+          })
+          .then<Water[]>((response) => response.json())
+          .then((response) => {
+            setSelectedCustomerWater(response);
+          })
+        }
+      })
+    }
   }
 
   return (
@@ -86,6 +127,7 @@ const Overview = () => {
           </div>
           <div className="col">
             { selectedCustomer && <CustomerDetails data={selectedCustomer} onUpdateCustomer={handleUpdateCustomer} /> }
+            { selectedCustomerWater && <WaterList data={selectedCustomerWater} onAddWater={handleAddingWater} />}
           </div>
         </div>
       </div>

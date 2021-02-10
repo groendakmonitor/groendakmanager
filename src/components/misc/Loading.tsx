@@ -1,8 +1,8 @@
 const Loading = () => {
   return (
-    <div className="d-flex align-items-center m-3">
+    <div className="d-flex justify-content-between m-3">
       <strong>Loading...</strong>
-      <div className="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+      <div className="spinner-border ms-auto text-info" role="status" aria-hidden="true"></div>
     </div>
   )
 }

@@ -32,7 +32,6 @@ const CustomerDetails = (props: Props) => {
   useEffect(() => {
     let map: google.maps.Map;
     const center: google.maps.LatLngLiteral = ! data.location ? {lat: 51.99954706308361, lng: 4.363697780523488} : toLatLong(data.location)
-    // 52.00621214372703,4.3545035426335765
 
     map = new google.maps.Map(ref.current!, {
       center,
@@ -152,10 +151,10 @@ const CustomerDetails = (props: Props) => {
         </fieldset> 
       </div>
       <div className="card-footer d-flex justify-content-between">
-        <button type="submit" className="btn btn-light">Verwijderen<i className="icon-file-text2 ml-2"></i></button>
+        <button type="submit" className="btn btn-light">Delete</button>
         <div>
           <button type="button" className="ml-2 btn btn-primary" onClick={handleSaveClick}>
-            Opslaan<i className="icon-arrow-right14 "></i>
+            Save
           </button>
         </div>
       </div>
