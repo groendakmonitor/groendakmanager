@@ -28,11 +28,18 @@ const Overview = () => {
       method: 'get',
       headers: [['Content-Type', 'application/json'], getAuthHeader()],
     })
-    .then<CustomerListData[]>((response) => response.json())
+    .then((response) => response.json())
     .then((response) => {
-      setData(response);
+      if (response.auth === false) {
+        setLocation("/login");
+      } else {
+        setData(response);
+      }
       setLoading(false)
     })
+    .catch((e) => {
+      console.log(e)
+    } )
   }, [setLocation]);
 
   const handleAddCustomer = () => {
