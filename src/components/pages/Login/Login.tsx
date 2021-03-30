@@ -1,5 +1,4 @@
-// import { API_URL } from "api";
-import { setAuthToken } from "authentication";
+import { setAuthToken } from "misc/authentication";
 import { useState } from "react";
 import useLocation from "wouter/use-location";
 import img from './styles/groendak.jpg';
@@ -33,7 +32,7 @@ const Login = () => {
     <div className="container d-flex justify-content-center align-items-center vh-100">
       <div className="col col-md-4 user-form py-4 d-flex flex-column">
         <div className="card">
-          <img src={img} className="card-img-top" />
+          <img src={img} className="card-img-top" alt="Welcome" />
           <div className="card-body">
             <h3 className="text-center">Log in to groendakmonitor</h3>
             <form>

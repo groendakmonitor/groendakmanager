@@ -1,4 +1,4 @@
-import { getAuthHeader, getAuthToken } from "authentication";
+import { getAuthHeader, getAuthToken } from "misc/npmauthentication";
 import Header from "components/misc/Header";
 import Page from "components/misc/Page";
 import { Water } from "models/water";
