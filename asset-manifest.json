@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/groendakmanager/static/css/main.69764827.chunk.css",
-    "main.js": "/groendakmanager/static/js/main.ff8638b5.chunk.js",
-    "main.js.map": "/groendakmanager/static/js/main.ff8638b5.chunk.js.map",
-    "runtime-main.js": "/groendakmanager/static/js/runtime-main.c750d700.js",
-    "runtime-main.js.map": "/groendakmanager/static/js/runtime-main.c750d700.js.map",
-    "static/js/2.5cb4d7d5.chunk.js": "/groendakmanager/static/js/2.5cb4d7d5.chunk.js",
-    "static/js/2.5cb4d7d5.chunk.js.map": "/groendakmanager/static/js/2.5cb4d7d5.chunk.js.map",
-    "static/js/3.b3d2a5ba.chunk.js": "/groendakmanager/static/js/3.b3d2a5ba.chunk.js",
-    "static/js/3.b3d2a5ba.chunk.js.map": "/groendakmanager/static/js/3.b3d2a5ba.chunk.js.map",
+    "main.css": "/groendakmanager/static/css/main.a9bef9f1.chunk.css",
+    "main.js": "/groendakmanager/static/js/main.cba2a7ad.chunk.js",
+    "main.js.map": "/groendakmanager/static/js/main.cba2a7ad.chunk.js.map",
+    "runtime-main.js": "/groendakmanager/static/js/runtime-main.a161852e.js",
+    "runtime-main.js.map": "/groendakmanager/static/js/runtime-main.a161852e.js.map",
+    "static/js/2.a0f0634f.chunk.js": "/groendakmanager/static/js/2.a0f0634f.chunk.js",
+    "static/js/2.a0f0634f.chunk.js.map": "/groendakmanager/static/js/2.a0f0634f.chunk.js.map",
+    "static/js/3.1673684d.chunk.js": "/groendakmanager/static/js/3.1673684d.chunk.js",
+    "static/js/3.1673684d.chunk.js.map": "/groendakmanager/static/js/3.1673684d.chunk.js.map",
     "index.html": "/groendakmanager/index.html",
-    "static/css/main.69764827.chunk.css.map": "/groendakmanager/static/css/main.69764827.chunk.css.map",
-    "static/js/2.5cb4d7d5.chunk.js.LICENSE.txt": "/groendakmanager/static/js/2.5cb4d7d5.chunk.js.LICENSE.txt",
+    "static/css/main.a9bef9f1.chunk.css.map": "/groendakmanager/static/css/main.a9bef9f1.chunk.css.map",
+    "static/js/2.a0f0634f.chunk.js.LICENSE.txt": "/groendakmanager/static/js/2.a0f0634f.chunk.js.LICENSE.txt",
     "static/media/groendak.8ad2a181.jpg": "/groendakmanager/static/media/groendak.8ad2a181.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c750d700.js",
-    "static/js/2.5cb4d7d5.chunk.js",
-    "static/css/main.69764827.chunk.css",
-    "static/js/main.ff8638b5.chunk.js"
+    "static/js/runtime-main.a161852e.js",
+    "static/js/2.a0f0634f.chunk.js",
+    "static/css/main.a9bef9f1.chunk.css",
+    "static/js/main.cba2a7ad.chunk.js"
   ]
 }
