@@ -1,3 +1,9 @@
-.customer-list .selected {
-  font-weight: bold;
+.customer-list {
+  tr td {
+    cursor: pointer;
+  }
+
+  .selected {
+    font-weight: bold;
+  }
 }
