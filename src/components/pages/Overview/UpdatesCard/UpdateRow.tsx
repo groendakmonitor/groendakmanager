@@ -28,7 +28,7 @@ const UpdateRow = (props: Props) => {
         </span>
       </td>
       <td className="col-text">
-        <textarea onChange={(e) => debounced(e.target.value)} defaultValue={data.text}></textarea>
+        <textarea onChange={(e) => debounced(e.target.value)} defaultValue={data.text} cols={3}></textarea>
       </td>
       <td className="col-delete">
         <button type="button" className="btn btn-light" onClick={() => onDelete(data.id)}>🗑️</button>        

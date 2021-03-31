@@ -1,7 +1,6 @@
 import { getAuthHeader } from "misc/authentication"
 import { UpdateData } from "models/update"
 import React, { useEffect, useState } from "react"
-import UpdateRow from "./UpdateRow"
 import UpdatesList from "./UpdatesList"
 
 const UpdatesCard = () => {
