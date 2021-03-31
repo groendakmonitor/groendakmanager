@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/groendakmanager/static/css/main.a9bef9f1.chunk.css",
-    "main.js": "/groendakmanager/static/js/main.cba2a7ad.chunk.js",
-    "main.js.map": "/groendakmanager/static/js/main.cba2a7ad.chunk.js.map",
+    "main.js": "/groendakmanager/static/js/main.ecac04f8.chunk.js",
+    "main.js.map": "/groendakmanager/static/js/main.ecac04f8.chunk.js.map",
     "runtime-main.js": "/groendakmanager/static/js/runtime-main.a161852e.js",
     "runtime-main.js.map": "/groendakmanager/static/js/runtime-main.a161852e.js.map",
     "static/js/2.a0f0634f.chunk.js": "/groendakmanager/static/js/2.a0f0634f.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.a161852e.js",
     "static/js/2.a0f0634f.chunk.js",
     "static/css/main.a9bef9f1.chunk.css",
-    "static/js/main.cba2a7ad.chunk.js"
+    "static/js/main.ecac04f8.chunk.js"
   ]
 }
