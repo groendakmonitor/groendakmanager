@@ -26,7 +26,7 @@ const Overview = () => {
       return;
     }
     setLoading(true)
-    fetch(`${process.env.REACT_APP_API_URL}/customers`, {
+    fetch(`${process.env.REACT_APP__API_URL}/customers`, {
       method: 'get',
       headers: [['Content-Type', 'application/json'], getAuthHeader()],
     })
@@ -47,7 +47,7 @@ const Overview = () => {
     const name = prompt("Enter customer name");
     if (name) {
       setLoading(true)
-      fetch(`${process.env.REACT_APP_API_URL}/customer`, {
+      fetch(`${process.env.REACT_APP__API_URL}/customer`, {
         method: 'post',
         headers: [['Content-Type', 'application/json'], getAuthHeader()],
         body: JSON.stringify({
@@ -64,7 +64,7 @@ const Overview = () => {
   const handleUpdateCustomer = (customerData: CustomerData) => {
     setLoading(true);
     // Update customer on backend
-    fetch(`${process.env.REACT_APP_API_URL}/customer`, {
+    fetch(`${process.env.REACT_APP__API_URL}/customer`, {
       method: 'put',
       headers: [['Content-Type', 'application/json'], getAuthHeader()],
       body: JSON.stringify(customerData)
@@ -87,7 +87,7 @@ const Overview = () => {
   useEffect(() => {
     // Fetch water for selected customer
     if (selectedCustomer) {
-      fetch(`${process.env.REACT_APP_API_URL}/water/${selectedCustomer.id}`, {
+      fetch(`${process.env.REACT_APP__API_URL}/water/${selectedCustomer.id}`, {
         method: 'get',
         headers: [['Content-Type', 'application/json'], getAuthHeader()],
       })
@@ -100,7 +100,7 @@ const Overview = () => {
 
   const handleAddingWater = (incoming: number, outgoing: number) => {
     if (selectedCustomer) {
-      fetch(`${process.env.REACT_APP_API_URL}/water`, {
+      fetch(`${process.env.REACT_APP__API_URL}/water`, {
         method: 'post',
         headers: [['Content-Type', 'application/json'], getAuthHeader()],
         body: JSON.stringify({
@@ -111,7 +111,7 @@ const Overview = () => {
       }).then(() => {
         // fetch water
         if (selectedCustomer) {
-          fetch(`${process.env.REACT_APP_API_URL}/water/${selectedCustomer.id}`, {
+          fetch(`${process.env.REACT_APP__API_URL}/water/${selectedCustomer.id}`, {
             method: 'get',
             headers: [['Content-Type', 'application/json'], getAuthHeader()],
           })

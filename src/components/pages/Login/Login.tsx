@@ -9,7 +9,7 @@ const Login = () => {
   const [password, setPassword] = useState<string>("safehouse ominous overdrive")
 
   const handleLogin = () => {
-    fetch(`${process.env.REACT_APP_API_URL}/login`, {
+    fetch(`${process.env.REACT_APP__API_URL}/login`, {
       method: 'post',
       headers: [['Content-Type', 'application/json']],
       body: JSON.stringify({

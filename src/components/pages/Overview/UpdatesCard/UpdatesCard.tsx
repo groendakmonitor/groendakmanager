@@ -7,7 +7,7 @@ const UpdatesCard = () => {
   const [data, setData] = useState<UpdateData[]>()
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/updates`, {
+    fetch(`${process.env.REACT_APP__API_URL}/updates`, {
       method: 'get',
       headers: [['Content-Type', 'application/json']],
     })
@@ -18,7 +18,7 @@ const UpdatesCard = () => {
   }, []);
   
   const handleAdd = () => {
-    fetch(`${process.env.REACT_APP_API_URL}/update`, {
+    fetch(`${process.env.REACT_APP__API_URL}/update`, {
       method: 'post',
       headers: [['Content-Type', 'application/json'], getAuthHeader()],
     }).then<UpdateData[]>((response) => response.json())
@@ -28,7 +28,7 @@ const UpdatesCard = () => {
   }
 
   const handleChange = (data: UpdateData) => {
-    fetch(`${process.env.REACT_APP_API_URL}/update`, {
+    fetch(`${process.env.REACT_APP__API_URL}/update`, {
       method: 'put',
       headers: [['Content-Type', 'application/json'], getAuthHeader()],
       body: JSON.stringify(data)
@@ -38,7 +38,7 @@ const UpdatesCard = () => {
   const handleDelete = (id: number) => {
     // eslint-disable-next-line no-restricted-globals
     if (confirm("Are you sure?")) {
-      fetch(`${process.env.REACT_APP_API_URL}/update/${id}`, {
+      fetch(`${process.env.REACT_APP__API_URL}/update/${id}`, {
         method: 'delete',
         headers: [['Content-Type', 'application/json'], getAuthHeader()],
       }).then<UpdateData[]>((response) => response.json())
