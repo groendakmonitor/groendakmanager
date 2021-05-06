@@ -122,6 +122,14 @@ const CustomerDetails = (props: Props) => {
             </div>
           </div>
           <div className="form-group row">
+            <label className="col-form-label col-lg-3">Password</label>
+            <div className="col-lg-9">
+              <div className="input-group">
+                <input type="text" className="form-control" value={current.password} onChange={handleChange} name="password" placeholder="password" />
+              </div>
+            </div>
+          </div>
+          <div className="form-group row">
             <label className="col-form-label col-lg-3">Roof size</label>
             <div className="col-lg-9">
               <div className="input-group">

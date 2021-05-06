@@ -1,6 +1,7 @@
 export interface CustomerData {
   id: string;
   name: string;
+  password: string;
   roof_size: number;
   roof_thickness: number;
   location: string;
