@@ -1,6 +1,6 @@
 {
   "name": "groendakmanager",
-  "homepage": "https://spassvogel.github.io/groendakmanager",
+  "homepage": "https://groendakmonitor.github.io/groendakmanager",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
