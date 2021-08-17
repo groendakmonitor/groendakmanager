@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/groendakmanager/static/css/main.a9bef9f1.chunk.css",
-    "main.js": "/groendakmanager/static/js/main.39df3b94.chunk.js",
-    "main.js.map": "/groendakmanager/static/js/main.39df3b94.chunk.js.map",
+    "main.js": "/groendakmanager/static/js/main.ef2bfb84.chunk.js",
+    "main.js.map": "/groendakmanager/static/js/main.ef2bfb84.chunk.js.map",
     "runtime-main.js": "/groendakmanager/static/js/runtime-main.a161852e.js",
     "runtime-main.js.map": "/groendakmanager/static/js/runtime-main.a161852e.js.map",
-    "static/js/2.a0f0634f.chunk.js": "/groendakmanager/static/js/2.a0f0634f.chunk.js",
-    "static/js/2.a0f0634f.chunk.js.map": "/groendakmanager/static/js/2.a0f0634f.chunk.js.map",
+    "static/js/2.bac5dfdb.chunk.js": "/groendakmanager/static/js/2.bac5dfdb.chunk.js",
+    "static/js/2.bac5dfdb.chunk.js.map": "/groendakmanager/static/js/2.bac5dfdb.chunk.js.map",
     "static/js/3.1673684d.chunk.js": "/groendakmanager/static/js/3.1673684d.chunk.js",
     "static/js/3.1673684d.chunk.js.map": "/groendakmanager/static/js/3.1673684d.chunk.js.map",
     "index.html": "/groendakmanager/index.html",
     "static/css/main.a9bef9f1.chunk.css.map": "/groendakmanager/static/css/main.a9bef9f1.chunk.css.map",
-    "static/js/2.a0f0634f.chunk.js.LICENSE.txt": "/groendakmanager/static/js/2.a0f0634f.chunk.js.LICENSE.txt",
+    "static/js/2.bac5dfdb.chunk.js.LICENSE.txt": "/groendakmanager/static/js/2.bac5dfdb.chunk.js.LICENSE.txt",
     "static/media/groendak.8ad2a181.jpg": "/groendakmanager/static/media/groendak.8ad2a181.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a161852e.js",
-    "static/js/2.a0f0634f.chunk.js",
+    "static/js/2.bac5dfdb.chunk.js",
     "static/css/main.a9bef9f1.chunk.css",
-    "static/js/main.39df3b94.chunk.js"
+    "static/js/main.ef2bfb84.chunk.js"
   ]
 }
