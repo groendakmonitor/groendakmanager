@@ -9,8 +9,8 @@ import Loading from "../../misc/Loading";
 import CustomerDetails from "./CustomerDetails";
 import CustomerList from "./CustomerList";
 import WaterList from "./WaterList";
-import UpdatesList from "./UpdatesCard";
 import UpdatesCard from "./UpdatesCard";
+import BiodiversityCard from "./BiodiversityCard";
 
 const Overview = () => {
   const [_location, setLocation] = useLocation();
@@ -142,6 +142,7 @@ const Overview = () => {
               </div>
             </div>
             <UpdatesCard />
+            <BiodiversityCard />
           </div>
           <div className="col">
             { selectedCustomer && <CustomerDetails data={selectedCustomer} onUpdateCustomer={handleUpdateCustomer} onDeleteCustomer={handleDeleteCustomer}/> }
