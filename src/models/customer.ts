@@ -1,3 +1,5 @@
+import { Theme } from "static/theme";
+
 export interface CustomerData {
   id: string;
   name: string;
@@ -6,6 +8,7 @@ export interface CustomerData {
   roof_thickness: number;
   location: string;
   start_date: string;
+  theme: Theme;
 }
 
 export type CustomerListData = CustomerData & {

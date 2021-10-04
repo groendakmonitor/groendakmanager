@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { CustomerData } from "models/customer";
+import ThemeSelector from "./ThemeSelector";
+import { Theme } from "static/theme";
 
 interface Props {
   data: CustomerData;
@@ -105,6 +107,13 @@ const CustomerDetails = (props: Props) => {
 
   }, [data.location]);
 
+  const handleThemeChange = (theme: Theme) => {
+    setCurrent({
+      ...current,
+      theme
+    })
+  }
+
   return (
     <div className="card">
       <div className="card-body">
@@ -157,6 +166,14 @@ const CustomerDetails = (props: Props) => {
               <div className="input-group">
                 <input type="text" className="form-control" ref={searchRef}/>
                 <div ref={ref} style={{ width: '100%', height: 200 }} />
+              </div>
+            </div>
+          </div>
+          <div className="form-group row">
+            <label className="col-form-label col-lg-3">Theme</label>
+            <div className="col-lg-9">
+              <div className="input-group">
+                <ThemeSelector theme={current.theme} onChange={handleThemeChange} />
               </div>
             </div>
           </div>
