@@ -5,7 +5,7 @@ import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 
 import 'assets/scss/bootstrap.scss';
-import 'assets/scss/bootstrap_limitless.scss';
+// import 'assets/scss/bootstrap_limitless.scss';
 
 import 'assets/scss/colors.scss';
 import 'assets/scss/components.scss';
